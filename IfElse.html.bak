@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <link type="text/css" rel="stylesheet" href="stylesheet1.css" />
+  <title>IfElse in PHP</title>
+ </head>
+ <body>
+    <div class="header">
+  <h1>Tutorial on PHP</h1>
+ </div>
+ <div class="contents">
+ <h4>CONTENTS</h4>
+ <ul>
+ <li><a href="About.html">About PHP</a></li>
+<li><a href="Syntax.html">PHP Syntax</a></li>
+<li><a href="Variables.html">PHP Variables</a></li>
+<li><a href="Echo.html">PHP Echo / Print</a></li>
+<li><a href="DataTypes.html">PHP Data Types</a></li>
+<li><a href="Strings.html">PHP Strings</a></li>
+<li><a href="Constants.html">PHP Constants</a></li>
+<li><a href="Operators.html">PHP Operators</a></li>
+<li><a href="IfElse.html"><strong>PHP If...Else...Elseif</strong></a></li>
+<li><a href="Switch.html">PHP Switch</a></li>
+<li><a href="While.html">PHP While Loops</a></li>
+<li><a href="For.html">PHP For Loops</a></li>
+<li><a href="Functions.html">PHP Functions</a></li>
+<li><a href="Arrays.html">PHP Arrays</a></li>
+</li>
+</ul>
+ </div>
+<div id="description">
+<h1>PHP If...Else...ElseIf Statements</h1>
+<h2>PHP Conditional Statements</h2>
+<p>Very often when you write code, you want to perform different actions for different decisions. You can use conditional statements in your code to do this.
+<br><br>
+In PHP we have the following conditional statements:
+	<ul>
+    <li> if statement - executes some code only if a specified condition is true<br><br>
+   <li> if...else statement - executes some code if a condition is true and another code if the condition is false<br><br>
+    <li> if...elseif....else statement - specifies a new condition to test, if the first condition is false<br><br>
+    <li> switch statement - selects one of many blocks of code to be executed<br><br>
+	</ul>
+</p>
+<h2>PHP - The if Statement</h2>
+<p>
+The if statement is used to execute some code only if a specified condition is true.</p>
+<h2>Syntax</h2>
+<table>
+<tr>
+	<td>if (<i>condition</i>) {<i><br>
+&nbsp;&nbsp;&nbsp; code to be executed if condition is true</i>;<br>}
+</td>
+</tr>
+</table>
+<p>The example below will output "Have a good day!" if the current time (HOUR) is less than 20:</p>
+<table>
+<tr>
+<td>&lt;?php<br>
+$t = date("H");<br><br>
+if ($t &lt; "20") {<br>
+&nbsp;
+&nbsp; 
+echo "Have a good day!";<br>
+	}
+?&gt;
+</td>
+</tr>
+</table>
+<h2>PHP - The if...else Statement</h2>
+
+<p>Use the if....else statement to execute some code if a condition is true and another code if the condition is false.</p>
+<h2>Syntax</h2>
+<table>
+<tr>
+<td>if (<i>condition</i>)&nbsp;{<br>
+&nbsp;
+&nbsp;&nbsp;<i>code to be executed if condition is true;</i><br>
+	}
+else {<br>
+&nbsp;&nbsp;<i>&nbsp; code to be executed if condition is false;<br>
+	</i>}
+
+</td>
+</tr>
+</table>
+<p>The example below will output "Have a good day!" if the current time is less than 20, and "Have a good night!" otherwise:</p>
+<table>
+<tr>
+<td>&lt;?php<br>
+$t = date("H");<br><br>
+if ($t &lt; "20") {<br>
+&nbsp;
+&nbsp; 
+echo "Have a good day!";<br>
+	}
+else {<br>
+&nbsp;&nbsp;&nbsp; echo 
+"Have a good night!";<br>
+
+	}<br>
+?&gt;
+
+</td>
+</tr>
+</table>
+<h2>PHP - The if...elseif....else Statement</h2>
+
+<p>Use the if....elseif...else statement to specify a new condition to test, if the first condition is false.</p>
+<h2>Syntax</h2>
+<table>
+<tr>
+<td>if (<i>condition</i>) {<br>
+&nbsp;
+&nbsp;&nbsp;<i>code to be executed if condition is true;<br>
+	</i>}
+elseif (<i>condition</i>) {<br>
+&nbsp;&nbsp;<i>&nbsp; code to be executed if condition is true;<br>
+	</i>} else {<br>
+&nbsp;
+&nbsp;&nbsp;<i>code to be executed if condition is false;<br>
+</i>}
+
+</td>
+</tr>
+</table>
+<p>The example below will output "Have a good morning!" if the current time is less than 10, and "Have a good day!" if the current time is less than 20. Otherwise it will output "Have a good night!":</p>
+<table>
+<tr>
+	<td>&lt;?php<br>
+$t = date("H");<br>
+	<br>if ($t &lt; "10") {<br>
+
+&nbsp;&nbsp;&nbsp; echo "Have a good morning!";<br>
+	}
+elseif ($t &lt; "20") {<br>
+&nbsp;&nbsp;&nbsp; echo "Have a good day!";<br>
+	} else {<br>
+&nbsp;&nbsp;&nbsp; echo "Have a good night!";<br>
+
+	}<br>
+?&gt;</td>
+</tr>
+</table>
+<p>The switch statement will be explained in the next chapter.</p>
+<hr>
+
+<!-- END -->
+<div id="end">
+	<table >
+	<tr>
+		<td><a href="Operators.html">&lt;&lt;Previous Chapter</td>
+		<td><a href="Switch.html">Next Chapter&gt;&gt;</td>
+	</tr>
+	</table>
+</div>
+</div>
+ </body>
+</html>

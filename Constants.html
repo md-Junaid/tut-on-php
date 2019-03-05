@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Constants in PHP</title>
+  <link type="text/css" rel="stylesheet" href="stylesheet1.css" />
+ </head>
+ <body>
+    <div class="header">
+  <table>
+  <tr>
+  <td><a href="Index.html">Home</a></td>
+  <td id="head"><h1>Tutorial on PHP</h1> </td>
+  </tr>
+  </table>
+ </div>
+ <div class="contents">
+ <h4>CONTENTS</h4>
+ <ul>
+ <li><a href="About.html">About PHP</a></li>
+<li><a href="Syntax.html">PHP Syntax</a></li>
+<li><a href="Variables.html">PHP Variables</a></li>
+<li><a href="Echo.html">PHP Echo / Print</a></li>
+<li><a href="DataTypes.html">PHP Data Types</a></li>
+<li><a href="Strings.html">PHP Strings</a></li>
+<li><a href="Constants.html"><b>PHP Constants</b></a></li>
+<li><a href="Operators.html">PHP Operators</a></li>
+<li><a href="IfElse.html">PHP If...Else...Elseif</a></li>
+<li><a href="Switch.html">PHP Switch</a></li>
+<li><a href="While.html">PHP While Loops</a></li>
+<li><a href="For.html">PHP For Loops</a></li>
+<li><a href="Functions.html">PHP Functions</a></li>
+<li><a href="Arrays.html">PHP Arrays</a></li>
+</li>
+</ul>
+ </div>
+ <!--ECHO HTML-->
+<div id="description">
+<h1>PHP Constants</h1>
+<p>A constant is an identifier (name) for a simple value. The value cannot be changed during the script.
+<br><br>
+A valid constant name starts with a letter or underscore (no $ sign before the constant name).
+<br><br>
+<strong>Note:</strong> Unlike variables, constants are automatically global across the entire script.
+<br><br>
+</p>
+<h2>Create a PHP Constant
+</h2>
+<p>To create a constant, use the define() function.
+<br><br>
+<strong>Syntax</strong>
+<br><br>
+<em>define(name, value, case-insensitive)</em>
+<br><br>
+<strong>Parameters:</strong>
+<br><br>
+1.<em>name:</em> Specifies the name of the constant<br>
+2.<em>value:</em> Specifies the value of the constant<br>
+3.<em>case-insensitive:</em> Specifies whether the constant name should be case-insensitive. Default is false
+<br><br>
+The example below creates a constant with a <strong>case-sensitive</strong> name:</p>
+  <table>
+<tr>
+<td>&lt;?php<br>
+	define(&quot;GREETING&quot;, &quot;Welcome to W3Schools.com!&quot;);<br>echo GREETING;<br>?&gt;
+</td>
+</tr>
+</table>
+<p>
+The example below creates a constant with a <strong>case-insensitive</strong> name:</p>
+ <table>
+<tr>
+<td>&lt;?php<br>
+	define(&quot;GREETING&quot;, &quot;Welcome to W3Schools.com!&quot;);<br>
+	echo greeting;<br>?&gt;
+</td>
+</tr>
+</table>
+<h2>Constants are Global</h2>
+<p>Constants are automatically global and can be used across the entire script.
+
+The example below uses a constant inside a function, even if it is defined outside the function:</p>
+  <table>
+<tr>
+<td>&lt;?php<br>
+define(&quot;GREETING&quot;, &quot;Welcome to W3Schools.com!&quot;);<br><br>function 
+	myTest() {<br>&nbsp;&nbsp;&nbsp; echo GREETING;<br>}<br>&nbsp;
+	<br>myTest();<br>
+	?&gt;
+</td>
+</tr>
+</table>
+<p>In the next chapter we shall learn about Operators in php</p>
+
+<hr>
+<!-- END -->
+<div id="end">
+	<table >
+	<tr>
+		<td><a href="Strings.html">&lt;&lt;Previous Chapter</td>
+		<td><a href="Operators.html">Next Chapter&gt;&gt;</td>
+	</tr>
+	</table>
+</div>
+</div> 
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <link type="text/css" rel="stylesheet" href="stylesheet1.css" />
+  <title>Operators in PHP</title>
+ </head>
+ <body>
+      <div class="header">
+  <table>
+  <tr>
+  <td><a href="Index.html">Home</a></td>
+  <td id="head"><h1>Tutorial on PHP</h1> </td>
+  </tr>
+  </table>
+ </div>
+ <div class="contents">
+ <h4>CONTENTS</h4>
+ <ul>
+ <li><a href="About.html">About PHP</a></li>
+<li><a href="Syntax.html">PHP Syntax</a></li>
+<li><a href="Variables.html">PHP Variables</a></li>
+<li><a href="Echo.html">PHP Echo / Print</a></li>
+<li><a href="DataTypes.html">PHP Data Types</a></li>
+<li><a href="Strings.html">PHP Strings</a></li>
+<li><a href="Constants.html">PHP Constants</a></li>
+<li><a href="Operators.html"><b>PHP Operators</b></a></li>
+<li><a href="IfElse.html">PHP If...Else...Elseif</a></li>
+<li><a href="Switch.html">PHP Switch</a></li>
+<li><a href="While.html">PHP While Loops</a></li>
+<li><a href="For.html">PHP For Loops</a></li>
+<li><a href="Functions.html">PHP Functions</a></li>
+<li><a href="Arrays.html">PHP Arrays</a></li>
+</li>
+</ul>
+ </div>
+ <!--SYNTAX HTML-->
+<div id="description">
+<h1>PHP Operators</h1>
+<p>Operators are used to perform operations on variables and values.
+<br><br>
+PHP divides the operators in the following groups:
+<ul>
+    <li>Arithmetic operators</li>
+    <li> Assignment operators</li>
+    <li> Comparison operators</li>
+    <li> Increment/Decrement operators</li>
+    <li> Logical operators</li>
+    <li> String operators</li>
+	<li> Array operators</li>
+</ul>
+</p>
+ <h2>PHP Arithmetic Operators</h2>
+ <p>The PHP arithmetic operators are used with numeric values to perform common arithmetical operations, such as addition, subtraction, multiplication etc.</p>
+<table border="1" width="100%" cellpadding="5" cellspacing="0">
+<tr>
+<th width="10%">Operator</th><th width="45%">Description</th><th>Example</th>
+</tr>
+<tr>
+<td>+</td><td>Adds two operands</td><td> A + B will give 30</td>
+</tr>
+<tr>
+
+<td>-</td><td>Subtracts second operand from the first</td><td> A - B will give -10</td>
+</tr>
+<tr>
+<td>*</td><td>Multiply both operands</td><td> A * B will give 200</td>
+</tr>
+<tr>
+<td>/</td><td>Divide numerator by denumerator</td><td> B / A will give 2</td>
+
+</tr>
+<tr>
+<td>%</td><td>Modulus Operator and remainder of after an integer division</td><td> B % A will give 0</td>
+</tr>
+<tr>
+<td>++</td><td>Increment operator, increases integer value by one</td><td> A++ will give 11</td>
+</tr>
+<tr>
+<td>--</td><td>Decrement operator, decreases integer value by one</td><td> A-- will give 9</td>
+
+</tr>
+</table>
+<h2>PHP Comparison Operators</h2>
+<p>The PHP comparison operators are used to compare two values (number or string):</p>
+<table border="1" width="100%" cellpadding="5" cellspacing="0">
+<tr>
+<th width="10%">Operator</th><th width="45%">Description</th><th>Example</th>
+</tr>
+
+<tr>
+<td>==</td><td> Checks if the value of two operands are equal or not, if yes then condition becomes true.</td><td> (A == B) is not true. </td>
+</tr>
+<tr>
+<td>!=</td><td> Checks if the value of two operands are equal or not, if values are not equal then condition becomes true.</td><td> (A != B) is true. </td>
+</tr>
+<tr>
+
+<td>&gt;</td><td> Checks if the value of left  operand is greater than the value of right operand, if yes then condition becomes true.</td><td> (A &gt; B) is not true. </td>
+</tr>
+<tr>
+<td>&lt;</td><td> Checks if the value of left  operand is less than the value of right operand, if yes then condition becomes true.</td><td> (A &lt; B) is true. </td>
+</tr>
+
+<tr>
+<td>&gt;=</td><td> Checks if the value of left  operand is greater than or equal to the value of right operand, if yes then condition becomes true.</td><td> (A &gt;= B) is not true. </td>
+</tr>
+<tr>
+<td>&lt;=</td><td> Checks if the value of left  operand is less than or equal to the value of right operand, if yes then condition becomes true.</td><td> (A &lt;= B) is true. </td>
+
+</tr>
+</table>
+
+<h2>PHP Logical Operators</h2>
+<p>The PHP logical operators are used to combine conditional statements.
+</p>
+<table border="1" width="100%" cellpadding="5" cellspacing="0">
+<tr>
+<th width="10%">Operator</th><th width="45%">Description</th><th>Example</th>
+</tr>
+
+<tr>
+<td>and</td><td> Called Logical AND  operator. If both the operands are true then then condition becomes true.</td><td> (A and B) is true.</td>
+</tr>
+<tr>
+<td>or</td><td>Called Logical OR Operator.  If any of the two operands are non zero then then condition becomes true.</td><td> (A or B) is true.</td>
+</tr>
+<tr>
+<td>&amp;&amp;</td><td> Called Logical AND  operator. If both the operands are non zero then then condition becomes true.</td><td> (A &amp;&amp; B) is true. </td>
+
+</tr>
+<tr>
+<td>||</td><td>Called Logical OR Operator.  If any of the two operands are non zero then then condition becomes true.</td><td> (A || B) is true.</td>
+</tr>
+<tr>
+<td>!</td><td>Called Logical NOT Operator.  Use to reverses the logical state of its operand. If a condition is true then Logical NOT operator will make false.</td><td> !(A &amp;&amp; B) is false. </td>
+</tr>
+
+</table>
+
+<h2>PHP String Operators</h2>
+<p>PHP has two operators that are specially designed for strings.
+</p>
+<table>
+<tr>
+<td>&lt;!DOCTYPE html&gt;<br>
+	&lt;html&gt;<br>
+    &lt;body&gt;<br><br>
+    &lt;?php<br>
+	ECHO &quot;Hello World!&lt;br&gt;&quot;;<br>echo &quot;Hello World!&lt;br&gt;&quot;;<br>
+	EcHo &quot;Hello World!&lt;br&gt;&quot;;<br>?&gt;<br><br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
+</td>
+</tr>
+</table>
+<p>However; all variable names are case-sensitive.<br><br>
+In the example below, only the first statement will display the value of the $color variable (this is because $color, $COLOR, and $coLOR are treated as three different variables):</p>
+<table>
+<tr>
+<td>&lt;!DOCTYPE html&gt;<br>
+	&lt;html&gt;<br>
+    &lt;body&gt;<br><br>
+    &lt;?php<br>
+	ECHO &quot;Hello World!&lt;br&gt;&quot;;<br>echo &quot;Hello World!&lt;br&gt;&quot;;<br>
+	EcHo &quot;Hello World!&lt;br&gt;&quot;;<br>?&gt;</span><br><br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
+</td>
+</tr>
+</table>
+<p>In the next chapter we shall learn about If...Else...Elseif statements in PHP</p>
+<hr>
+<!-- END -->
+<div id="end">
+	<table >
+	<tr>
+		<td><a href="Constants.html">&lt;&lt;Previous Chapter</td>
+		<td><a href="IfElse.html">Next Chapter&gt;&gt;</td>
+	</tr>
+	</table>
+</div>
+</div>
+ </body>
+</html>

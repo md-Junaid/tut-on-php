@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <link type="text/css" rel="stylesheet" href="stylesheet1.css" />
+  <title>Arrays in PHP</title>
+ </head>
+ <body> <div class="header">
+  <h1>Tutorial on PHP</h1>
+ </div>
+ <div class="contents">
+ <h4>CONTENTS</h4>
+ <ul>
+ <li><a href="About.html">About PHP</a></li>
+<li><a href="Syntax.html">PHP Syntax</a></li>
+<li><a href="Variables.html">PHP Variables</a></li>
+<li><a href="Echo.html">PHP Echo / Print</a></li>
+<li><a href="DataTypes.html">PHP Data Types</a></li>
+<li><a href="Strings.html">PHP Strings</a></li>
+<li><a href="Constants.html">PHP Constants</a></li>
+<li><a href="Operators.html">PHP Operators</a></li>
+<li><a href="IfElse.html">PHP If...Else...Elseif</a></li>
+<li><a href="Switch.html">PHP Switch</a></li>
+<li><a href="While.html">PHP While Loops</a></li>
+<li><a href="For.html">PHP For Loops</a></li>
+<li><a href="Functions.html">PHP Functions</a></li>
+<li><a href="Arrays.html"><strong>PHP Arrays</strong></a></li>
+</li>
+</ul>
+ </div>
+ <!--DATA TYPES HTML-->
+<div id="description">
+  <h1>PHP Arrays</h1>
+<p>An array stores multiple values in one single variable:
+</p>
+<table>
+<tr>
+	<td>$cars1 = &quot;Volvo&quot;;<br>
+$cars2 = &quot;BMW&quot;;<br>
+$cars3 = &quot;Toyota&quot;;
+</td>
+</tr>
+</table>
+ <h2>What is an Array?</h2>
+<p>An array is a special variable, which can hold more than one value at a time.
+<br><br>
+If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:</p>
+<table>
+<tr>
+	<td>$cars1 = "Volvo";
+$cars2 = "BMW";
+$cars3 = "Toyota";</td>
+</tr>
+</table>
+ <h2>Create an Array in PHP</h2>
+<p>In PHP, the array() function is used to create an array:</p>
+
+ <table>
+ <tr>
+	<td>array();</td>
+ </tr>
+ </table>
+ <h2>In PHP, there are three types of arrays:</h2>
+<ul>
+<li>Indexed arrays - Arrays with a numeric index
+<li>Associative arrays - Arrays with named keys
+<li>Multidimensional arrays - Arrays containing one or more arrays
+</ul>
+ <h2>PHP Indexed Arrays</h2>
+<p>There are two ways to create indexed arrays:
+<br><br>
+The index can be assigned automatically (index always starts at 0), like this:</p>
+<table>
+<tr>
+	<td>$cars = array(&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Toyota&quot;);</td>
+</tr>
+</table>
+<p>or the index can be assigned manually:</p>
+<table>
+<tr>
+	<td>$cars[0] = &quot;Volvo&quot;;<br>
+$cars[1] = &quot;BMW&quot;;<br>
+$cars[2] = &quot;Toyota&quot;;</td>
+</tr>
+</table>
+<p>The following example creates an indexed array named $cars, assigns three elements to it, and then prints a text containing the array values:
+</p>
+<table>
+<tr>
+	<td>&lt;?php<br>
+	$cars = array(&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Toyota&quot;);<br>echo &quot;I like &quot; . $cars[0] . &quot;, &quot; . $cars[1] . &quot; and &quot; . $cars[2] . &quot;.&quot;;<br>
+?&gt;</td>
+</tr>
+</table>
+<h2>Get The Length of an Array - The count() Function</h2>
+<p>The count() function is used to return the length (the number of elements) of an array:</p>
+<table>
+<tr>
+	<td>&lt;?php<br>
+	$cars = array(&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Toyota&quot;);<br>echo count($cars);<br>?&gt;
+</td>
+</tr>
+</table>
+
+<h2>Loop Through an Indexed Array</h2>
+<p>To loop through and print all the values of an indexed array, you could use a for loop, like this:</p>
+<table>
+<tr>
+	<td>&lt;?php<br>
+	$cars = array(&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Toyota&quot;);<br>
+	$arrlength = count($cars);<br><br>for($x = 0; $x &lt; $arrlength; $x++) {<br>&nbsp; &nbsp; 
+	echo $cars[$x];<br>&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&quot;;<br>}<br>?&gt;
+
+</td>
+</tr>
+</table>
+<h2>PHP Associative Arrays</h2>
+<p>Associative arrays are arrays that use named keys that you assign to them.</p>
+<p>There are two ways to create an associative array:&nbsp;</p>
+<table>
+<tr>
+	<td>
+$age = array(&quot;Peter&quot;=&gt;&quot;35&quot;, &quot;Ben&quot;=&gt;&quot;37&quot;, &quot;Joe&quot;=&gt;&quot;43&quot;);</td>
+</tr>
+</table>
+<p>or:</p>
+<table>
+<tr>
+	<td>$age['Peter'] = &quot;35&quot;;<br>
+$age['Ben'] = &quot;37&quot;;<br>
+$age['Joe'] = &quot;43&quot;; 
+</td>
+</tr>
+</table>
+<p>The named keys can then be used in a script:</p>
+<table>
+<tr>
+	<td>&lt;?php<br>
+
+$age = array(&quot;Peter&quot;=&gt;&quot;35&quot;, &quot;Ben&quot;=&gt;&quot;37&quot;, &quot;Joe&quot;=&gt;&quot;43&quot;);<br>
+echo &quot;Peter is &quot; . $age['Peter'] . &quot; years old.&quot;;<br>
+?&gt;
+</td>
+</tr>
+</table>
+
+<h2>Loop Through an Associative Array</h2>
+<p>To loop through and print all the values of an associative array, you could use a foreach loop, like this:</p>
+<table>
+<tr>
+	<td>&lt;?php<br>$age = array(&quot;Peter&quot;=&gt;&quot;35&quot;, &quot;Ben&quot;=&gt;&quot;37&quot;, &quot;Joe&quot;=&gt;&quot;43&quot;);<br>
+	<br>foreach($age as $x =&gt; $x_value) {<br>&nbsp; &nbsp; echo &quot;Key=&quot; . $x . 
+	&quot;, Value=&quot; . $x_value;<br>&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&quot;;<br>}<br>?&gt;
+</td>
+</tr>
+</table>
+ <p></p>
+<hr>
+<!-- END -->
+<div id="end">
+	<table >
+	<tr>
+		<td><a href="Functions.html">&lt;&lt;Previous Chapter</td>
+		
+	</tr>
+	</table>
+</div>
+</div>
+ 
+ 
+ </body>
+
+</html>

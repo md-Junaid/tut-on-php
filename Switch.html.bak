@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <link type="text/css" rel="stylesheet" href="stylesheet1.css" />
+  <title>Switch in PHP</title>
+ </head>
+ <body>
+  <div class="header">
+  <h1>Tutorial on PHP
+</h1>
+ </div>
+ <div class="contents">
+ <h4>CONTENTS</h4>
+ <ul>
+ <li><a href="About.html">About PHP</a></li>
+<li><a href="Syntax.html">PHP Syntax</a></li>
+<li><a href="Variables.html">PHP Variables</a></li>
+<li><a href="Echo.html">PHP Echo / Print</a></li>
+<li><a href="DataTypes.html">PHP Data Types</a></li>
+<li><a href="Strings.html">PHP Strings</a></li>
+<li><a href="Constants.html">PHP Constants</a></li>
+<li><a href="Operators.html">PHP Operators</a></li>
+<li><a href="IfElse.html">PHP If...Else...Elseif</a></li>
+<li><a href="Switch.html"><b>PHP Switch</b></a></li>
+<li><a href="While.html">PHP While Loops</a></li>
+<li><a href="For.html">PHP For Loops</a></li>
+<li><a href="Functions.html">PHP Functions</a></li>
+<li><a href="Arrays.html">PHP Arrays</a></li>
+</li>
+</ul>
+ </div>
+ <!--VARIABLES HTML-->
+<div id="description">
+<h1>PHP Switch statements</h1>
+<p>Use the switch statement to select one of many blocks of code to be executed.</p>
+<h2>Syntax</h2>
+<table>
+<tr>
+<td>
+switch (<i>n</i>)
+{<br>
+&nbsp;&nbsp;&nbsp; case <i>label1:</i><br>
+&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code to be executed if n=label1;</i><br>
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+&nbsp;
+&nbsp;
+case <i>label2:</i><br>
+&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp; &nbsp; code to be executed if n=label2;</i><br>
+&nbsp;&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;break;<br>
+&nbsp;
+&nbsp;
+case <i>label3:</i><br>
+&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp; &nbsp; code to be executed if n=label3;</i><br>
+&nbsp;&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;break;<br>&nbsp; &nbsp; ...<br>
+&nbsp;&nbsp;&nbsp; default:<br>
+&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code to be executed if n is different from all labels;</i><br>
+}
+
+</td>
+</tr>
+</table>
+
+<h2>Example</h2>
+<table>
+<tr>
+<td>&lt;?php<br>
+	$favcolor = &quot;red&quot;;<br><br>
+	switch ($favcolor)
+	{<br>
+	&nbsp;&nbsp;&nbsp; case &quot;red&quot;:<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;Your favorite color is red!&quot;;<br>
+	&nbsp;&nbsp;&nbsp;
+	&nbsp;
+	&nbsp; break;<br>
+	&nbsp;
+	&nbsp;
+	case &quot;blue&quot;:<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; echo &quot;Your favorite color is blue!&quot;;<br>
+	&nbsp;&nbsp;&nbsp;
+	&nbsp;
+	&nbsp; break;<br>
+	&nbsp;
+	&nbsp;
+	case &quot;green&quot;:<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; echo &quot;Your favorite color is green!&quot;;<br>
+	&nbsp;&nbsp;&nbsp;
+	&nbsp;
+	&nbsp; break;<br>
+	&nbsp;
+	&nbsp;
+	default:<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; echo &quot;Your favorite color is neither red, blue, or green!&quot;;<br>
+	}<br>
+	?&gt;
+</td>
+</tr>
+</table>
+<p>In the next chapter we will learn about While loops in PHP.</p>
+<hr>
+<!-- END -->
+<div id="end">
+	<table >
+	<tr>
+		<td><a href="IfElse.html">&lt;&lt;Previous Chapter</td>
+		<td><a href="While.html">Next Chapter&gt;&gt;</td>
+	</tr>
+	</table>
+</div>
+</div>
+
+ </body>
+</html>

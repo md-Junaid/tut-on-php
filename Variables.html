@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <link type="text/css" rel="stylesheet" href="stylesheet1.css" />
+  <title>Variables in PHP</title>
+ </head>
+ <body>
+     <div class="header">
+  <table>
+  <tr>
+  <td><a href="Index.html">Home</a></td>
+  <td id="head"><h1>Tutorial on PHP</h1> </td>
+  </tr>
+  </table>
+ </div>
+ <div class="contents">
+ <h4>CONTENTS</h4>
+ <ul>
+ <li><a href="About.html">About PHP</a></li>
+<li><a href="Syntax.html">PHP Syntax</a></li>
+<li><a href="Variables.html"><strong>PHP Variables</strong></a></li>
+<li><a href="Echo.html">PHP Echo / Print</a></li>
+<li><a href="DataTypes.html">PHP Data Types</a></li>
+<li><a href="Strings.html">PHP Strings</a></li>
+<li><a href="Constants.html">PHP Constants</a></li>
+<li><a href="Operators.html">PHP Operators</a></li>
+<li><a href="IfElse.html">PHP If...Else...Elseif</a></li>
+<li><a href="Switch.html">PHP Switch</a></li>
+<li><a href="While.html">PHP While Loops</a></li>
+<li><a href="For.html">PHP For Loops</a></li>
+<li><a href="Functions.html">PHP Functions</a></li>
+<li><a href="Arrays.html">PHP Arrays</a></li>
+</li>
+</ul>
+ </div>
+ <!--VARIABLES HTML-->
+<div id="description">
+<h1>Creating (Declaring) PHP Variables</h1>
+<p>In PHP, a variable starts with the $ sign, followed by the name of the variable:<br></p>
+<table>
+<tr>
+<td>&lt;?php<br>
+$txt = &quot;Hello world!&quot;;<br>
+$x = 5;<br>$y = 10.5;<br>
+?&gt;
+</td>
+</tr>
+</table>
+<p>After the execution of the statements above, the variable $txt will hold the value Hello world!, the variable $x will hold the value 5, and the variable $y will hold the value 10.5.<br><br>
+<b>Note</b>: When you assign a text value to a variable, put quotes around the value.<br><br>
+<b>Note</b>: Unlike other programming languages, PHP has no command for declaring a variable. It is created the moment you first assign a value to it.<br></p>
+<h2>PHP Variables</h2>
+<p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).
+<br><br>
+Rules for PHP variables:
+<ul>
+<li>A variable starts with the $ sign, followed by the name of the variable</li>
+<li>A variable name must start with a letter or the underscore character</li>
+<li>A variable name cannot start with a number</li>
+<li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+<li>Variable names are case-sensitive ($age and $AGE are two different variables)</li>
+</ul>
+</p>
+<h2>Output Variables</h2>
+<p>The PHP echo statement is often used to output data to the screen.<br><br>
+The following example will show how to output text and a variable:
+</p>
+<table>
+<tr>
+<td>$txt = &quot;PHP programming&quot;;<br>
+	echo &quot;I love $txt!&quot;;<br>?&gt;
+</td>
+</tr>
+</table>
+<p>The output will be</p>
+<table>
+<tr>
+<td>I love PHP programming!<br><br>
+</td>
+</tr>
+</table>
+<h2>PHP Variables Scope</h2>
+<p>In PHP, variables can be declared anywhere in the script.
+<br><br>
+The scope of a variable is the part of the script where the variable can be referenced/used.
+<br><br>
+PHP has three different variable scopes:
+<ul>
+<li>local
+<li>global
+<li>static
+</ul>
+</p>
+ <h2>Global and Local Scope</h2>
+ <p>A variable declared outside a function has a GLOBAL SCOPE and can only be accessed outside a function:</p>
+<table>
+<tr>
+<td>&lt;?php<br>$x = 5; // global scope<br><br>function myTest() {<br>&nbsp;&nbsp;&nbsp; // using x 
+	inside this function will generate an error<br>&nbsp;&nbsp;&nbsp; echo 
+	&quot;&lt;p&gt;Variable x inside function is: $x&lt;/p&gt;&quot;;<br>} <br>myTest();<br><br>echo 
+	&quot;&lt;p&gt;Variable x outside function is: $x&lt;/p&gt;&quot;;<br>?&gt;
+</td>
+</tr>
+</table>
+<p>A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function:</p>
+<table>
+<tr>
+<td>
+&lt;?php<br>function myTest() {<br>&nbsp;&nbsp;&nbsp; $x = 5; // local scope<br>&nbsp;&nbsp;&nbsp; echo 
+	&quot;&lt;p&gt;Variable x inside function is: $x&lt;/p&gt;&quot;;<br>} <br>myTest();<br><br>// 
+	using x outside the function will generate an error<br>echo &quot;&lt;p&gt;Variable x 
+	outside function is: $x&lt;/p&gt;&quot;;<br>?&gt;
+
+</td>
+</tr>
+</table>
+<h2>PHP The global Keyword</h2>
+<p>
+The global keyword is used to access a global variable from within a function.
+<br><br>
+To do this, use the <b>global</b> keyword before the variables (inside the function):
+</p>
+<table>
+<tr>
+<td>
+&lt;?php<br>
+$x = 5;<br>$y = 10;<br><br>
+function myTest()
+{<br>
+&nbsp;&nbsp;&nbsp; global $x, $y;<br>
+&nbsp;
+&nbsp;
+$y = $x + $y;<br>
+}<br><br>
+myTest();<br>
+echo $y; // outputs 15<br>
+?&gt;<br>
+</td>
+</tr>
+</table>
+<h2>PHP The static Keyword</h2>
+<p>Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job.
+<br><br>
+To do this, use the <b>static</b> keyword when you first declare the variable:</p>
+<table>
+<tr>
+<td>
+&lt;?php<br>function myTest()
+{<br>
+&nbsp;&nbsp;&nbsp; static $x = 0;<br>
+&nbsp;&nbsp;&nbsp; echo $x;<br>
+&nbsp;&nbsp;&nbsp; $x++;<br>
+}<br><br>
+myTest();<br>
+myTest();<br>
+myTest();<br>?&gt;
+<br>
+</td>
+</tr>
+</table>
+<p>Then, each time the function is called, that variable will still have the information it contained from the last time the function was called.<br><br>
+In the next chapter we will learn about PHP echo and print Statements.</p>
+<hr>
+<!-- END -->
+<div id="end">
+	<table >
+	<tr>
+		<td><a href="Syntax.html">&lt;&lt;Previous Chapter</td>
+		<td><a href="Echo.html">Next Chapter&gt;&gt;</td>
+	</tr>
+	</table>
+</div>
+</div>
+
+ </body>
+</html>

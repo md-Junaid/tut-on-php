@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Strings in PHP</title>
+  <link type="text/css" rel="stylesheet" href="stylesheet1.css" />
+ </head>
+ <body>
+     <div class="header">
+  <table>
+  <tr>
+  <td><a href="Index.html">Home</a></td>
+  <td id="head"><h1>Tutorial on PHP</h1> </td>
+  </tr>
+  </table>
+ </div>
+ <div class="contents">
+ <h4>CONTENTS</h4>
+ <ul>
+ <li><a href="About.html">About PHP</a></li>
+<li><a href="Syntax.html">PHP Syntax</a></li>
+<li><a href="Variables.html">PHP Variables</a></li>
+<li><a href="Echo.html">PHP Echo / Print</a></li>
+<li><a href="DataTypes.html">PHP Data Types</a></li>
+<li><a href="Strings.html"><b>PHP Strings</b></a></li>
+<li><a href="Constants.html">PHP Constants</a></li>
+<li><a href="Operators.html">PHP Operators</a></li>
+<li><a href="IfElse.html">PHP If...Else...Elseif</a></li>
+<li><a href="Switch.html">PHP Switch</a></li>
+<li><a href="While.html">PHP While Loops</a></li>
+<li><a href="For.html">PHP For Loops</a></li>
+<li><a href="Functions.html">PHP Functions</a></li>
+<li><a href="Arrays.html">PHP Arrays</a></li>
+</li>
+</ul>
+ </div>
+ <!--ECHO HTML-->
+<div id="description">
+<h1>PHP Strings</h1>
+<p>In this chapter we will look at some commonly used functions to manipulate strings.
+<br><br>
+</p>
+<h2>Get The Length of a String</h2>
+<p>The PHP strlen() function returns the length of a string (number of characters).
+<br><br>
+The example below returns the length of the string "Hello world!":
+<br><br>
+</p>
+  <table>
+<tr>
+<td>&lt;?php<br>
+echo strlen(&quot;Hello world!&quot;); // outputs 12<br>
+?&gt;
+<br>
+?&gt;
+</td>
+</tr>
+</table>
+<h2>Count The Number of Words in a String</h2>
+<p>The PHP str_word_count() function counts the number of words in a string:</p>
+  <table>
+<tr>
+<td>&lt;?php<br>
+echo str_word_count(&quot;Hello world!&quot;); 
+	// outputs 2<br>
+?&gt;
+</div>
+<br>
+</td>
+</tr>
+</table>
+<h2>Reverse a String</h2>
+<p>
+The PHP strrev() function reverses a string:
+</p>
+  <table>
+<tr>
+<td>
+&lt;?php<br>
+echo strrev(&quot;Hello world!&quot;); 
+	// outputs !dlrow olleH<br>
+?&gt;
+</td>
+</tr>
+</table>
+<h2>Search For a Specific Text Within a String</h2>
+<p>
+The PHP strpos() function searches for a specific text within a string.
+<br><br>
+If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.
+<br><br>
+The example below searches for the text "world" in the string "Hello world!":</p>
+<table>
+<tr>
+	<td>&lt;?php<br>
+echo strpos(&quot;Hello world!&quot;, &quot;world&quot;); 
+	// outputs 6<br>
+?&gt;
+ </td>
+</tr>
+</table>
+<h2>Replace Text Within a String</h2>
+<p>The PHP str_replace() function replaces some characters with some other characters in a string.
+<br><br>
+The example below replaces the text "world" with "Dolly":
+</p>
+<table>
+<tr>
+	<td>&lt;?php<br>
+echo str_replace(&quot;world&quot;, 
+	&quot;Dolly&quot;, &quot;Hello world!&quot;); 
+	// outputs Hello Dolly!<br>
+?&gt;
+ </td>
+</tr>
+</table>
+<p>In the next chapter we shall learn about Constants in php</p>
+
+<hr>
+<!-- END -->
+<div id="end">
+	<table >
+	<tr>
+		<td><a href="DataTypes.html">&lt;&lt;Previous Chapter</td>
+		<td><a href="Constants.html">Next Chapter&gt;&gt;</td>
+	</tr>
+	</table>
+</div>
+</div>
+</body>
+</html>

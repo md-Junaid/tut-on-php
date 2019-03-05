@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <link type="text/css" rel="stylesheet" href="stylesheet1.css" />
+  <title>While loops in PHP</title>
+ </head>
+ <body>
+  <div class="header">
+  <table>
+  <tr>
+  <td><a href="Index.html">Home</a></td>
+  <td id="head"><h1>Tutorial on PHP</h1> </td>
+  </tr>
+  </table>
+ </div>
+ <div class="contents">
+ <h4>CONTENTS</h4>
+ <ul>
+ <li><a href="About.html">About PHP</a></li>
+<li><a href="Syntax.html">PHP Syntax</a></li>
+<li><a href="Variables.html">PHP Variables</a></li>
+<li><a href="Echo.html">PHP Echo / Print</a></li>
+<li><a href="DataTypes.html">PHP Data Types</a></li>
+<li><a href="Strings.html">PHP Strings</a></li>
+<li><a href="Constants.html">PHP Constants</a></li>
+<li><a href="Operators.html">PHP Operators</a></li>
+<li><a href="IfElse.html">PHP If...Else...Elseif</a></li>
+<li><a href="Switch.html">PHP Switch</a></li>
+<li><a href="While.html"><strong>PHP While Loops</strong></a></li>
+<li><a href="For.html">PHP For Loops</a></li>
+<li><a href="Functions.html">PHP Functions</a></li>
+<li><a href="Arrays.html">PHP Arrays</a></li>
+</li>
+</ul>
+ </div>
+ <!--VARIABLES HTML-->
+<div id="description">
+<h1>PHP Loops</h1>
+<p>Often when you write code, you want the same block of code to run over and over again in a row. Instead of adding several almost equal code-lines in a script, we can use loops to perform a task like this.
+
+In PHP, we have the following looping statements:
+
+<ul>
+	<li><strong>while </strong>- loops through a block of code as long as the specified condition is true</li>
+	<li><strong>do...while</strong> - loops through a block of code once, and then repeats the loop as long as the specified condition is true</li>
+	<li><strong>for</strong> - loops through a block of code a specified number of times</li>
+<li><strong>foreach</strong> - loops through a block of code for each element in an array</li>
+	
+</ul>
+</p>
+<h2>The PHP while Loop</h2>
+<p>The while loop executes a block of code as long as the specified condition is true.
+</p>
+<h2>Syntax</h2>
+<table>
+<tr>
+<td>
+while (<i>condition is true</i>) {<br>
+<i>&nbsp;&nbsp;&nbsp; code to be executed</i>;<br>
+	}
+
+</td>
+</tr>
+</table>
+<p>The example below first sets a variable $x to 1 ($x = 1). Then, the while loop will continue to run as long as $x is less than, or equal to 5 ($x &lt;= 5). $x will increase by 1 each time the loop runs ($x++):</p>
+<table>
+<tr>
+<td>
+&lt;?php <br>$x = 1; <br><br>while($x &lt;= 5) {<br>&nbsp;&nbsp;&nbsp; echo &quot;The number is: 
+	$x &lt;br&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; $x++;<br>} <br>?&gt; 
+</td>
+</tr>
+</table>
+
+<h2>The PHP do...while Loop</h2>
+<p>The do...while loop will always execute the block of code once, it will then check the condition, and repeat the loop while the specified condition is true.
+</p>
+<h2>Syntax</h2>
+<table>
+<tr>
+<td>do
+{<br>
+<i>&nbsp; &nbsp; code to be executed;<br>
+</i>}
+while (<i>condition is true</i>);
+
+</td>
+</tr>
+</table>
+<p>The example below first sets a variable $x to 1 ($x = 1). Then, the do while loop will write some output, and then increment the variable $x with 1. Then the condition is checked (is $x less than, or equal to 5?), and the loop will continue to run as long as $x is less than, or equal to 5:</p>
+<table>
+<tr>
+<td>
+&lt;?php <br>$x = 1; <br><br>do {<br>&nbsp;&nbsp;&nbsp; echo &quot;The number is: 
+	$x &lt;br&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; $x++;<br>} while ($x &lt;= 5);<br>?&gt
+</td>
+</tr>
+</table>
+<p>
+Notice that in a do while loop the condition is tested AFTER executing the statements within the loop. This means that the do while loop would execute its statements at least once, even if the condition <strong>is false </strong>the first time.
+<br><br>
+The example below sets the $x variable to 6, then it runs the loop, and then the condition is checked:
+</p>
+<table>
+<tr>
+<td>
+&lt;?php <br>$x = 6;<br> <br>do {<br>&nbsp; &nbsp; echo &quot;The number is: 
+	$x &lt;br&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; $x++;<br>} while ($x&lt;=5);<br>?&gt;
+</td>
+</tr>
+</table>
+<p>
+In the next chapter we will learn about the for loop and the foreach loop</p>
+<hr>
+<!-- END -->
+<div id="end">
+	<table >
+	<tr>
+		<td><a href="Switch.html">&lt;&lt;Previous Chapter</td>
+		<td><a href="For.html">Next Chapter&gt;&gt;</td>
+	</tr>
+	</table>
+</div>
+</div>
+
+ </body>
+</html>

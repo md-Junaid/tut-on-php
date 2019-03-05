@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <link type="text/css" rel="stylesheet" href="stylesheet1.css" />
+  <title>For loops in PHP</title>
+ </head>
+ <body>
+  <div class="header">
+  <h1>Tutorial on PHP</h1>
+ </div>
+ <div class="contents">
+ <h4>CONTENTS</h4>
+ <ul>
+ <li><a href="About.html">About PHP</a></li>
+<li><a href="Syntax.html">PHP Syntax</a></li>
+<li><a href="Variables.html">PHP Variables</a></li>
+<li><a href="Echo.html">PHP Echo / Print</a></li>
+<li><a href="DataTypes.html">PHP Data Types</a></li>
+<li><a href="Strings.html">PHP Strings</a></li>
+<li><a href="Constants.html">PHP Constants</a></li>
+<li><a href="Operators.html">PHP Operators</a></li>
+<li><a href="IfElse.html">PHP If...Else...Elseif</a></li>
+<li><a href="Switch.html">PHP Switch</a></li>
+<li><a href="While.html">PHP While Loops</a></li>
+<li><a href="For.html"><strong>PHP For Loops</strong></a></li>
+<li><a href="Functions.html">PHP Functions</a></li>
+<li><a href="Arrays.html">PHP Arrays</a></li>
+</li>
+</ul>
+ </div>
+ <!--VARIABLES HTML-->
+<div id="description">
+
+<h1>PHP for Loop</h1>
+<p>The for loop is used when you know in advance how many times the script should run.
+</p>
+<h2>Syntax</h2>
+<table>
+<tr>
+<td>
+for (<i>init counter; test counter; increment counter</i>)
+{<br>
+&nbsp;&nbsp;<i>&nbsp; code to be executed;</i><br>
+</td>
+</tr>
+</table>
+<p>Parameters:
+<ul>
+<li>init counter: Initialize the loop counter value</li>
+<li>test counter: Evaluated for each loop iteration. If it evaluates to TRUE, the loop continues. If it evaluates to FALSE, the loop ends.</li>
+<li>increment counter: Increases the loop counter value</li>
+</ul>
+</p>
+<p>The example below displays the numbers from 0 to 10:</p>
+<table>
+<tr>
+<td>
+&lt;?php <br>for ($x = 0; $x &lt;= 10; $x++)
+{<br>
+	&nbsp;&nbsp;&nbsp; echo &quot;The number is: 
+	$x &lt;br&gt;&quot;;<br>} <br>?&gt;
+</td>
+</tr>
+</table>
+<h2>
+The PHP foreach Loop
+</h2>
+<p>The foreach loop works only on arrays, and is used to loop through each key/value pair in an array.
+</p>
+<h2>Syntax</h2>
+<table>
+<tr>
+<td>
+foreach ($<i>array </i>as<i> </i>$<i>value</i>)
+{<br>
+&nbsp;
+&nbsp;&nbsp;<i>code to be executed;</i><br>
+	}
+
+</td>
+</tr>
+</table>
+<p>The example below first sets a variable $x to 1 ($x = 1). Then, the do while loop will write some output, and then increment the variable $x with 1. Then the condition is checked (is $x less than, or equal to 5?), and the loop will continue to run as long as $x is less than, or equal to 5:</p>
+<table>
+<tr>
+<td>
+&lt;?php <br>$x = 1; <br><br>do {<br>&nbsp;&nbsp;&nbsp; echo &quot;The number is: 
+	$x &lt;br&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; $x++;<br>} while ($x &lt;= 5);<br>?&gt
+</td>
+</tr>
+</table>
+<p>
+For every loop iteration, the value of the current array element is assigned to $value and the array pointer is moved by one, until it reaches the last array element.
+<br><br>
+The following example demonstrates a loop that will output the values of the given array ($colors):</p>
+<table>
+<tr>
+<td>
+&lt;?php <br>$colors = array(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;yellow&quot;); <br>
+	<br>foreach ($colors as 
+	$value) {<br>&nbsp;&nbsp;&nbsp; echo &quot;$value &lt;br&gt;&quot;;<br>}<br>?&gt;
+</td>
+</tr>
+</table>
+<p>
+In the next chapter we will learn about functions in PHP</p>
+<hr>
+<!-- END -->
+<div id="end">
+	<table >
+	<tr>
+		<td><a href="While.html">&lt;&lt;Previous Chapter</td>
+		<td><a href="Functions.html">Next Chapter&gt;&gt;</td>
+	</tr>
+	</table>
+</div>
+</div>
+
+ </body>
+</html>
